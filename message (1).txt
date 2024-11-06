@@ -1,0 +1,388 @@
+running hw3-asttest0.spl
+passed!
+running hw3-asttest1.spl
+passed!
+running hw3-asttest2.spl
+passed!
+running hw3-asttest3.spl
+passed!
+running hw3-asttest4.spl
+1,24c1
+< begin
+<   const pi = 31, e = 3;
+<   var x, y, z;
+<   x := ((3 * 4) - (2 / 5));
+<   if x > 0
+<   then
+<     x := (y + 1)
+<   else
+<     x := 1;
+<     y := z
+<   end;
+<   if divisible y by 3
+<   then
+<     y := ((y / 2) + 3)
+<   end;
+<   while x <= 10
+<   do
+<     x := (x + 1)
+<   end;
+<   print x;
+<   read y;
+<   print (y + 2)
+< end
+< .
+---
+> hw3-asttest4.spl:7: syntax error, unexpected ;, expecting .
+running hw3-asttest5.spl
+1,13c1
+< begin
+<   var x;
+<   x := (2 - 1);
+<   if x <= 1
+<   then
+<     print x
+<   end;
+<   while x <= 10
+<   do
+<     x := (x + 1)
+<   end
+< end
+< .
+---
+> hw3-asttest5.spl:5: syntax error, unexpected ;, expecting .
+running hw3-asttest6.spl
+1,33c1
+< begin
+<   const a = 1, b = 3;
+<   const c = 4, d = 6;
+<   var aVar, anotherVar;
+<   var x;
+<   begin
+<     aVar := -(1);
+<     anotherVar := (((aVar - 2) - (3 / 1)) - (6 * aVar));
+<     if anotherVar >= aVar
+<     then
+<       begin
+<         print 32;
+<         print 10;
+<         anotherVar := ((anotherVar / 12) + 2);
+<         while (anotherVar * 2) < 3
+<         do
+<           anotherVar := 0
+<         end
+<       end
+<     else
+<       if 3 < 2
+<       then
+<         if 7 > 5
+<         then
+<           x := 3
+<         else
+<           x := ((2 * 3) - (5 / 4))
+<         end
+<       end
+<     end
+<   end
+< end
+< .
+---
+> hw3-asttest6.spl:21: syntax error, unexpected else, expecting ; or end
+running hw3-asttest7.spl
+passed!
+running hw3-asttest8.spl
+passed!
+running hw3-asttest9.spl
+1,17c1
+< begin
+<   var x, y, z;
+<   var varname, varname2;
+<   x := 10;
+<   y := ((5 - x) - -(7));
+<   while x != 0
+<   do
+<     read x;
+<     if x <= 0
+<     then
+<       print (x + y)
+<     else
+<       print (y - x)
+<     end
+<   end
+< end
+< .
+---
+> hw3-asttest9.spl:11: syntax error, unexpected end, expecting .
+running hw3-asttestA.spl
+1,46c1
+< begin
+<   const a = 1, b = 2;
+<   const c = 3, d = 4, e = 5, f = 6;
+<   var x, y, z;
+<   x := ((d - e) - ((f * 33) / b));
+<   y := (((x + 1) - 2) - (3 * 4));
+<   if 0 != y
+<   then
+<     z := ((y + (100 * 1)) - c)
+<   else
+<     z := (((5 / x) - (3 * x)) + ((1 * d) / e));
+<     if z >= 0
+<     then
+<       if ((x - 2) + 1) > ((f + 3) - 4)
+<       then
+<         if ((10 * y) + a) <= ((10 * z) - b)
+<         then
+<           if divisible c by (2 + 5)
+<           then
+<             y := ((2 * c) - c)
+<           else
+<             if ((((6 * d) * 5) - e) - f) == ((x * (10 / b)) - b)
+<             then
+<               if divisible ((((x - c) - d) - e) - (f / a)) by ((2 * 1) + 1)
+<               then
+<                 print (67 * c)
+<               else
+<                 read z;
+<                 print ((z * 10) - f);
+<                 while ((z * 10) - f) < (a - a)
+<                 do
+<                   z := (z - (a / (b / (b + 0))));
+<                   print z;
+<                   print 10
+<                 end
+<               end
+<             else
+<               x := 3
+<             end
+<           end
+<         end
+<       end
+<     end
+<   end
+< end
+< .
+---
+> hw3-asttestA.spl:19: syntax error, unexpected divisible
+running hw3-asttestB.spl
+passed!
+running hw3-asttestC.spl
+1,4c1
+< begin
+<   var x;
+< end
+< .
+---
+> Segmentation fault (core dumped)
+running hw3-asttestD.spl
+1,4c1
+< begin
+<   const x = 10;
+< end
+< .
+---
+> Segmentation fault (core dumped)
+running hw3-test0.spl
+1,3c1
+< begin
+< end
+< .
+---
+> Segmentation fault (core dumped)
+running hw3-test1.spl
+passed!
+running hw3-test2.spl
+passed!
+running hw3-test3.spl
+passed!
+running hw3-test4.spl
+1,27c1
+< begin
+<   const pi = 31, e = 3;
+<   var x, y, z;
+<   begin
+<     x := ((3 * 4) - (2 / 5));
+<     if x > 0
+<     then
+<       x := (y + 1)
+<     else
+<       x := 1;
+<       y := z
+<     end;
+<     while x <= 10
+<     do
+<       x := (x + 1)
+<     end;
+<     print x;
+<     read y;
+<     print (y + 2);
+<     if divisible y by 2
+<     then
+<     else
+<       y := ((y / 2) + 3)
+<     end
+<   end
+< end
+< .
+---
+> hw3-test4.spl:9: syntax error, unexpected ;, expecting .
+running hw3-test5.spl
+1,13c1
+< begin
+<   var x;
+<   x := (2 - 1);
+<   if x <= 1
+<   then
+<     print x
+<   end;
+<   while x <= 10
+<   do
+<     x := (x + 1)
+<   end
+< end
+< .
+---
+> hw3-test5.spl:5: syntax error, unexpected ;, expecting .
+running hw3-test6.spl
+1,31c1
+< begin
+<   const a = 1, b = 3;
+<   const c = 4, d = 6;
+<   var aVar, anotherVar;
+<   var x;
+<   begin
+<     aVar := -(1);
+<     anotherVar := (((aVar - 2) - (3 / 1)) - (6 * aVar));
+<     if anotherVar >= aVar
+<     then
+<       print 32;
+<       print 10;
+<       anotherVar := ((anotherVar / 12) + 2);
+<       while (anotherVar * 2) < 3
+<       do
+<         anotherVar := 0
+<       end
+<     else
+<       if 3 < 2
+<       then
+<         if 7 > 5
+<         then
+<           x := 3
+<         end
+<       else
+<         x := ((2 * 3) - (5 / 4))
+<       end
+<     end
+<   end
+< end
+< .
+---
+> hw3-test6.spl:19: syntax error, unexpected else, expecting ; or end
+running hw3-test7.spl
+passed!
+running hw3-test8.spl
+passed!
+running hw3-test9.spl
+1,21c1
+< begin
+<   var x, y, z;
+<   var varname, varname2;
+<   begin
+<     x := 10;
+<     y := ((5 - x) - -(7));
+<     while x != 0
+<     do
+<       begin
+<         read x;
+<         if x <= 0
+<         then
+<           print (x + y)
+<         else
+<           print (y - x)
+<         end
+<       end
+<     end
+<   end
+< end
+< .
+---
+> hw3-test9.spl:15: syntax error, unexpected end, expecting .
+running hw3-testA.spl
+passed!
+running hw3-errtest0.spl
+1,2c1
+< hw3-errtest0.spl:3: invalid character: '!' ('\041')
+< (null):4: syntax error, unexpected end of file, expecting .
+---
+> Segmentation fault (core dumped)
+running hw3-errtest1.spl
+passed!
+running hw3-errtest2.spl
+passed!
+running hw3-errtest3.spl
+passed!
+running hw3-errtest4.spl
+passed!
+running hw3-errtest5.spl
+passed!
+running hw3-parseerrtest0.spl
+1c1
+< (null):4: syntax error, unexpected end of file, expecting .
+---
+> Segmentation fault (core dumped)
+running hw3-parseerrtest1.spl
+passed!
+running hw3-parseerrtest2.spl
+passed!
+running hw3-parseerrtest3.spl
+passed!
+running hw3-parseerrtest4.spl
+passed!
+running hw3-parseerrtest5.spl
+1,32c1
+< begin
+<   var x, y, z;
+<   begin
+<     begin
+<       begin
+<         begin
+<           begin
+<             begin
+<               x := 0;
+<               y := 2;
+<               read z;
+<               if z < x
+<               then
+<                 while z < x
+<                 do
+<                   if z < y
+<                   then
+<                     z := (z + (y * w))
+<                   else
+<                     z := (z + 1)
+<                   end
+<                 end
+<               end
+<             end
+<           end
+<         end
+<       end
+<     end
+<   end
+< end
+< .
+< hw3-parseerrtest5.spl: line 18 identifier "w" is not declared!
+---
+> hw3-parseerrtest5.spl:27: syntax error, unexpected end, expecting .
+running hw3-parseerrtest6.spl
+1c1
+< hw3-parseerrtest6.spl:28: syntax error, unexpected ., expecting ; or end
+---
+> hw3-parseerrtest6.spl:28: syntax error, unexpected end, expecting .
+running hw3-parseerrtest7.spl
+1c1
+< hw3-parseerrtest7.spl:24: syntax error, unexpected identsym
+---
+> hw3-parseerrtest7.spl:19: syntax error, unexpected divisible
+running hw3-parseerrtest8.spl
+passed!
+Some nondeclaration test(s) failed!
