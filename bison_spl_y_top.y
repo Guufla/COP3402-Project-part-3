@@ -1,4 +1,4 @@
- /* $Id: bison_spl_y_top.y,v 1.3 2024/10/31 19:24:47 leavens Exp leavens $ */
+ /* $Id: bison_spl_y_top.y,v 1.2 2024/10/09 18:18:55 leavens Exp $ */
 
 %code top {
 #include <stdio.h>
@@ -100,7 +100,6 @@ extern void yyerror(const char *filename, const char *msg);
 %type <expr> expr
 %type <expr> term
 %type <expr> factor
-%type <token> sign
 
 %start program
 
@@ -127,3 +126,4 @@ extern void setProgAST(block_t t);
 
 // Set the program's ast to be ast
 void setProgAST(block_t ast) { progast = ast; }
+

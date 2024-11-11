@@ -6,6 +6,8 @@
 #include "symtab.h"
 #include "scope_check.h"
 #include "utilities.h"
+#include "id_attrs.h"
+#include "id_use.h"
 #include "unparser.h"
 
 /* Print a usage message on stderr 

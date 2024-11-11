@@ -29,4 +29,3 @@ begin
   end
 end
 .
-hw3-parseerrtest5.spl: line 18 identifier "w" is not declared!

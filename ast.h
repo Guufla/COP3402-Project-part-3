@@ -305,6 +305,10 @@ typedef struct block_s {
 } block_t;
 
 // program ::= block
+typedef struct program_s {
+    block_t *block;
+} program_t;
+
 
 // The AST definition used by bison
 typedef union AST_u {
